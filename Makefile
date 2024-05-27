@@ -49,7 +49,7 @@ debug: $(navilos)
 	qemu-system-arm -M realview-pb-a8 -kernel $(navilos) -S -gdb tcp::1234,ipv4
 	
 gdb:
-	arm-none-eabi-gdb
+	gdb-multiarch build/navilos.axf
 
 kill:
 	kill -9 `ps aux | grep 'qemu' | awk 'NR==1{print $$2}'`
