@@ -20,6 +20,8 @@ void main(void)
 
     Printf_test();
 
+    while(1);
+
     i = 100;
     while (i--)
     {
@@ -30,6 +32,7 @@ void main(void)
 
 static void Hw_init(void)
 {
+    Hal_interrupt_init();
     Hal_uart_init();
 }
 
